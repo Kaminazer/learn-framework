@@ -1,0 +1,22 @@
+{
+    "name": "aigletter/learn-framework.loc",
+    "description": "Learn project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yurii Orlyk",
+            "email": "aigletter@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/log": "3.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src",
+            "App\\": "app"
+        }
+    }
+}
