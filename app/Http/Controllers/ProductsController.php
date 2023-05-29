@@ -8,8 +8,8 @@ class ProductsController
 {
     public function index()
     {
-        echo $this->doSomething() . ': ';
-        echo __METHOD__;
+        //echo $this->doSomething() . ': ';
+        echo Application::getApp()->get('temp')->run();
     }
 
     public function show()
@@ -22,8 +22,8 @@ class ProductsController
         echo __METHOD__;
     }
 
-    private function doSomething()
+    /*private function doSomething()
     {
         return 'Hello world';
-    }
+    }*/
 }

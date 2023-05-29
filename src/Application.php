@@ -2,8 +2,7 @@
 
 namespace Core;
 
-use Core\Interfaces\RouteInterface;
-use Psr\Log\LoggerInterface;
+use Core\Exceptions\HttpException;
 
 class Application
 {
@@ -14,6 +13,8 @@ class Application
     protected static $instance;
 
     protected $config;
+
+    protected $bindings = [];
 
     protected $components = [];
 
@@ -31,9 +32,7 @@ class Application
         $this->config = $config;
 
         foreach ($this->config['components'] as $name => $componentConfig) {
-            $className = $componentConfig['class'];
-            $instance = new $className();
-            $this->components[$name] = $instance;
+            $this->bindings[$name] = $componentConfig;
         }
     }
 
@@ -43,7 +42,22 @@ class Application
             return $this->components[$name];
         }
 
+        if (isset($this->bindings[$name])) {
+            return $this->make($name);
+        }
+
         throw new \Exception('Component ' . $name . ' not found');
+    }
+
+    protected function make($name)
+    {
+        $factoryClassName = $this->bindings[$name]['factory'];
+        $params = $this->bindings[$name]['params'] ?? [];
+        $factory = new $factoryClassName($params);
+        $instance = $factory->create();
+        $this->components[$name] = $instance;
+
+        return $instance;
     }
 
     private function __construct()
@@ -67,8 +81,17 @@ class Application
     {
         $this->get('logger')->debug('Application is running');
 
-        $action = $this->get('router')->route();
-        $action();
+        try {
+            $action = $this->get('router')->route();
+            $action();
+        } catch (HttpException $exception) {
+            http_response_code($exception->getCode());
+            echo $exception->getMessage();
+        } catch (\Throwable $exception) {
+            http_response_code(500);
+            echo 'Server error';
+        }
+
 
         $this->get('logger')->debug('End main method');
     }

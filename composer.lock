@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "105b39f2cdc5f5a6b3bcfa742f4caafb",
+    "content-hash": "f5e16689b6c692a7fc67b98bf595e758",
     "packages": [
+        {
+            "name": "nazar/loging",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kaminazer/SimpleLogger.git",
+                "reference": "77fe106e69131031ae797b11779e718de26db2ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/77fe106e69131031ae797b11779e718de26db2ed",
+                "reference": "77fe106e69131031ae797b11779e718de26db2ed",
+                "shasum": ""
+            },
+            "require": {
+                "psr/log": "^3.0@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Logging\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nazarii Korol",
+                    "email": "nazarkorol3684@gmail.com"
+                }
+            ],
+            "description": "Simple loger",
+            "support": {
+                "issues": "https://github.com/Kaminazer/SimpleLogger/issues",
+                "source": "https://github.com/Kaminazer/SimpleLogger/tree/master"
+            },
+            "time": "2023-05-25T15:05:33+00:00"
+        },
         {
             "name": "psr/log",
             "version": "dev-master",
@@ -62,7 +103,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "psr/log": 20
+        "psr/log": 20,
+        "nazar/loging": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

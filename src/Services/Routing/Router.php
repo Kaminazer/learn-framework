@@ -2,6 +2,7 @@
 
 namespace Core\Services\Routing;
 
+use Core\Exceptions\NotFoundException;
 use Core\Interfaces\RouteInterface;
 
 class Router implements RouteInterface
@@ -20,7 +21,7 @@ class Router implements RouteInterface
 
         $controllerName = 'App\\Http\\Controllers\\' . $controllerName;
         if (!class_exists($controllerName)) {
-            throw new \Exception('Controller not found');
+            throw new NotFoundException('Controller not found');
         }
 
         $controller = new $controllerName();
@@ -30,7 +31,7 @@ class Router implements RouteInterface
         }
 
         if (!method_exists($controller, $actionName)) {
-            throw new \Exception('Method not found');
+            throw new NotFoundException('Method not found');
         }
 
         //$controller->$actionName();
