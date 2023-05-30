@@ -1,12 +1,12 @@
 {
-    "name": "aigletter/learn-framework.loc",
+    "name": "nazar/learn-framework.loc",
     "description": "Learn project",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "Yurii Orlyk",
-            "email": "aigletter@gmail.com"
+            "name": "Nazarii Korol",
+            "email": "nazarkorol3684@gmail.com"
         }
     ],
     "minimum-stability": "dev",
