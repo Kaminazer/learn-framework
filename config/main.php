@@ -6,7 +6,8 @@ return [
     'components' => [
         'router' => [
             //'class' => \Core\Services\Routing\Router::class,
-            'factory' => \Core\Services\Routing\RouterFactory::class,
+            //'factory' => \Core\Services\Routing\RouterFactory::class,
+            'factory' => \App\Services\Routing\RouterFactory::class
         ],
         'logger' => [
             //'class' => \Core\Services\Logging\Logger::class
@@ -22,6 +23,6 @@ return [
             'params' => [
                 'size' => 25
             ]
-        ]
+        ],
     ],
 ];

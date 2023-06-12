@@ -20,13 +20,10 @@ $app = new Application($router, new class() extends AbstractLogger {
 });*/
 
 
+$config = include __DIR__ . '/../config/main.php';
 
-(function () {
-    $config = include __DIR__ . '/../config/main.php';
+$app = Application::getApp();
 
-    $app = Application::getApp();
+$app->configure($config);
 
-    $app->configure($config);
-
-    $app->main();
-})();
+$app->main();

@@ -24,7 +24,6 @@ use Psr\Log\LoggerInterface;
  * @property Test $temp
  * @property LoggerInterface $logger
  * @property RouteInterface $route
- * @method string run
  */
 class Application
 {
