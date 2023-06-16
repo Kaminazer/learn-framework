@@ -63,19 +63,7 @@ class Application
     private function __construct()
     {
     }
-
-    /*public function __construct(array $config)
-    {
-        $this->config = $config;
-    }*/
-
-    /*public function __construct(
-        RouteInterface $router,
-        LoggerInterface $logger
-    ) {
-        $this->router = $router;
-        $this->logger = $logger;
-    }*/
+    
 
     public function main()
     {

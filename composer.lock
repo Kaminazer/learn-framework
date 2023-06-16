@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kaminazer/SimpleLogger.git",
-                "reference": "77fe106e69131031ae797b11779e718de26db2ed"
+                "reference": "b6960d8a894f1d2468432101742db54b3643c885"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/77fe106e69131031ae797b11779e718de26db2ed",
-                "reference": "77fe106e69131031ae797b11779e718de26db2ed",
+                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/b6960d8a894f1d2468432101742db54b3643c885",
+                "reference": "b6960d8a894f1d2468432101742db54b3643c885",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "issues": "https://github.com/Kaminazer/SimpleLogger/issues",
                 "source": "https://github.com/Kaminazer/SimpleLogger/tree/master"
             },
-            "time": "2023-05-25T15:05:33+00:00"
+            "time": "2023-06-15T10:13:21+00:00"
         },
         {
             "name": "psr/log",
