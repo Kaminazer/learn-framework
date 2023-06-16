@@ -42,7 +42,7 @@ class Application
      * Массив конфигов
      * @var array
      */
-    protected $config;
+    protected array $config;
 
     /**
      * Привязки имен сервисов и фабрик, которые умеют их создавать.
@@ -52,12 +52,12 @@ class Application
      * @see Application::make()
      * @var array
      */
-    protected $bindings = [];
+    protected array $bindings = [];
 
     /**
      * @var array
      */
-    protected $components = [];
+    protected array $components = [];
 
     /**
      * Метод паттерна "Одиночка", с помощью которого клиенты получают экземпляр класса
@@ -66,7 +66,7 @@ class Application
      * @return Application
      * @todo Избавиться от синглтона в будущем
      */
-    public static function getApp()
+    public static function getApp():Application
     {
         if (self::$instance === null) {
             self::$instance = new self();
@@ -88,7 +88,7 @@ class Application
      *   ]
      * ])
      */
-    public function configure(array $config)
+    public function configure(array $config):void
     {
         // Здесь я делаю то-то и то-то для того-то и того-то
         $this->config = $config;
@@ -116,7 +116,7 @@ class Application
      * @throws \Exception
      * @todo Вынести в отдельный класс, и отнаследоваться от этого нового класса
      */
-    public function get(string $name)
+    public function get(string $name):object
     {
         if (isset($this->components[$name])) {
             return $this->components[$name];
@@ -136,7 +136,7 @@ class Application
      * @return object
      * @todo Вынести в отдельный класс, и отнаследоваться от этого нового класса
      */
-    protected function make($name)
+    protected function make(string $name):object
     {
         // Получаем класс фабрики по связке "название компонента - его фабрика"
         $factoryClassName = $this->bindings[$name]['factory'];
@@ -162,30 +162,6 @@ class Application
     }
 
     /**
-     * Пример некоторого устаревшего метода, который будет удален в будущем
-     * @deprecated
-     * @see Application::boo()
-     * @return void
-     */
-    public function foo()
-    {
-        //
-    }
-
-    /*public function __construct(array $config)
-    {
-        $this->config = $config;
-    }*/
-
-    /*public function __construct(
-        RouteInterface $router,
-        LoggerInterface $logger
-    ) {
-        $this->router = $router;
-        $this->logger = $logger;
-    }*/
-
-    /**
      * Основная функция запуска приложения
      *
      * Данная функция запускает роутинг и все остальное...
@@ -193,7 +169,7 @@ class Application
      * @return void
      * @throws \Exception
      */
-    public function main()
+    public function main():void
     {
         $this->get('logger')->debug('Application is running');
 

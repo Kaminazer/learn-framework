@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "828fa6d85e571e042c4356532fcd6af9",
+    "content-hash": "2f5fd080ebe1d0cd31e3582994205f7c",
     "packages": [
         {
             "name": "bramus/router",
@@ -70,12 +70,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kaminazer/SimpleLogger.git",
-                "reference": "77fe106e69131031ae797b11779e718de26db2ed"
+                "reference": "b6960d8a894f1d2468432101742db54b3643c885"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/77fe106e69131031ae797b11779e718de26db2ed",
-                "reference": "77fe106e69131031ae797b11779e718de26db2ed",
+                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/b6960d8a894f1d2468432101742db54b3643c885",
+                "reference": "b6960d8a894f1d2468432101742db54b3643c885",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +103,7 @@
                 "issues": "https://github.com/Kaminazer/SimpleLogger/issues",
                 "source": "https://github.com/Kaminazer/SimpleLogger/tree/master"
             },
-            "time": "2023-05-25T15:05:33+00:00"
+            "time": "2023-06-15T10:13:21+00:00"
         },
         {
             "name": "psr/log",
@@ -162,11 +162,12 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "psr/log": 20,
-        "nazar/loging": 20
+        "nazar/loging": 20,
+        "bramus/router": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

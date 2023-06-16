@@ -6,10 +6,11 @@ use Core\Interfaces\ComponentFactoryAbstract;
 use Logging\FileWriter;
 use Logging\Formatter;
 use Logging\Logger;
+use Psr\Log\LoggerInterface;
 
 class NazarLoggerFactory extends ComponentFactoryAbstract
 {
-    protected function createConcrete()
+    protected function createConcrete():LoggerInterface
     {
         $writer = new FileWriter($this->params['fileName'], new Formatter());
         return new Logger($writer);

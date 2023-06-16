@@ -34,14 +34,6 @@ class Router implements RouteInterface
             throw new NotFoundException('Method not found');
         }
 
-        //$controller->$actionName();
-        //call_user_func([$controller, $actionName]);
-
         return [$controller, $actionName];
-    }
-
-    private function defineControllerName()
-    {
-
     }
 }

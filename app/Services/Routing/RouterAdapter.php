@@ -14,7 +14,7 @@ class RouterAdapter implements RouteInterface
         $this->router = $router;
     }
 
-    protected function addRoutes()
+    protected function addRoutes():void
     {
         include $_SERVER['DOCUMENT_ROOT'] . '/../routes/web.php';
     }
