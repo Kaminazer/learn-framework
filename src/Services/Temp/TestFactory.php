@@ -2,7 +2,7 @@
 
 namespace Core\Services\Temp;
 
-use Core\Interfaces\ComponentFactoryAbstract;
+use Core\Contracts\ComponentFactoryAbstract;
 
 class TestFactory extends ComponentFactoryAbstract
 {

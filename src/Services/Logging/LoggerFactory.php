@@ -2,7 +2,7 @@
 
 namespace Core\Services\Logging;
 
-use Core\Interfaces\ComponentFactoryAbstract;
+use Core\Contracts\ComponentFactoryAbstract;
 
 class LoggerFactory extends ComponentFactoryAbstract
 {

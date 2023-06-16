@@ -3,7 +3,7 @@
 namespace App\Services\Routing;
 
 use Bramus\Router\Router;
-use Core\Interfaces\RouteInterface;
+use Core\Contracts\RouteInterface;
 
 class RouterAdapter implements RouteInterface
 {

@@ -2,8 +2,8 @@
 
 namespace Core\Services\Routing;
 
-use Core\Interfaces\ComponentFactoryAbstract;
-use Core\Interfaces\RouteInterface;
+use Core\Contracts\ComponentFactoryAbstract;
+use Core\Contracts\RouteInterface;
 
 class RouterFactory extends ComponentFactoryAbstract
 {

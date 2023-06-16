@@ -2,7 +2,7 @@
 
 namespace App\Services\Logger;
 
-use Core\Interfaces\ComponentFactoryAbstract;
+use Core\Contracts\ComponentFactoryAbstract;
 use Logging\FileWriter;
 use Logging\Formatter;
 use Logging\Logger;

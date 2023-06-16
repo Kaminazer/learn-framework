@@ -9,9 +9,9 @@ class ProductsController
     public function index():void
     {
         $app = Application::getApp();
-        echo $app->temp->run();
+        echo $app->get('temp')->run();
 
-        $app->logger->debug('Product controller index method is running');
+        $app->get('logger')->debug('Product controller index method is running');
     }
 
     public function show():void

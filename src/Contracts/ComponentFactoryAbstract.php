@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Interfaces;
+namespace Core\Contracts;
 
 abstract class ComponentFactoryAbstract
 {

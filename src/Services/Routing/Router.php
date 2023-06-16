@@ -3,7 +3,7 @@
 namespace Core\Services\Routing;
 
 use Core\Exceptions\NotFoundException;
-use Core\Interfaces\RouteInterface;
+use Core\Contracts\RouteInterface;
 
 class Router implements RouteInterface
 {
