@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "psr/log": "3.x-dev",
-        "nazar/loging": "dev-master"
+        "nazar/loging": "dev-master",
+        "bramus/router": "dev-master"
     },
     "autoload": {
         "psr-4": {

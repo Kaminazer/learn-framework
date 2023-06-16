@@ -9,7 +9,11 @@ class ProductsController
     public function index()
     {
         //echo $this->doSomething() . ': ';
-        echo Application::getApp()->get('temp')->run();
+        $app = Application::getApp();
+        //$app->get('temp')->run();
+        echo $app->temp->run();
+
+        $app->logger->debug('Product controller index method is running');
     }
 
     public function show()

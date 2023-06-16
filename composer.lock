@@ -4,20 +4,78 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e7bb19d36acbd0681e6b1e320f0ec55",
+    "content-hash": "828fa6d85e571e042c4356532fcd6af9",
     "packages": [
+        {
+            "name": "bramus/router",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bramus/router.git",
+                "reference": "968d04f86dafa116abc5f84a9689902393e00ac5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bramus/router/zipball/968d04f86dafa116abc5f84a9689902393e00ac5",
+                "reference": "968d04f86dafa116abc5f84a9689902393e00ac5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.14",
+                "phpunit/php-code-coverage": "~2.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bramus": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bram(us) Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "http://www.bram.us"
+                }
+            ],
+            "description": "A lightweight and simple object oriented PHP Router",
+            "homepage": "https://github.com/bramus/router",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/bramus/router/issues",
+                "source": "https://github.com/bramus/router/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bramus",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-07-29T13:56:21+00:00"
+        },
         {
             "name": "nazar/loging",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kaminazer/SimpleLogger.git",
-                "reference": "b6960d8a894f1d2468432101742db54b3643c885"
+                "reference": "77fe106e69131031ae797b11779e718de26db2ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/b6960d8a894f1d2468432101742db54b3643c885",
-                "reference": "b6960d8a894f1d2468432101742db54b3643c885",
+                "url": "https://api.github.com/repos/Kaminazer/SimpleLogger/zipball/77fe106e69131031ae797b11779e718de26db2ed",
+                "reference": "77fe106e69131031ae797b11779e718de26db2ed",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +103,7 @@
                 "issues": "https://github.com/Kaminazer/SimpleLogger/issues",
                 "source": "https://github.com/Kaminazer/SimpleLogger/tree/master"
             },
-            "time": "2023-06-15T10:13:21+00:00"
+            "time": "2023-05-25T15:05:33+00:00"
         },
         {
             "name": "psr/log",
@@ -110,5 +168,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

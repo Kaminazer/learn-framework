@@ -13,6 +13,6 @@ class Test
 
     public function run()
     {
-        return 'I am running';
+        return 'Temp component is running';
     }
 }
